@@ -1,0 +1,24 @@
+{
+  "name": "base64url",
+  "version": "0.0.1",
+  "description": "For encoding to/from base64urls",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/tap test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brianloveswords/base64url.git"
+  },
+  "keywords": [
+    "base64",
+    "base64url"
+  ],
+  "author": "Brian J Brennan",
+  "license": "MIT",
+  "readmeFilename": "readme.md",
+  "gitHead": "a219306e93712cb4380286b44360fea4406d49d3",
+  "dependencies": {
+    "tap": "~0.3.3"
+  }
+}
