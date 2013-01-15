@@ -13,5 +13,10 @@ $ npm install base64url
 const base64url = require('base64url');
 const data = "I am a teapot hear me roar";
 const encoded = base64url(data);
-const b64str = base64url.toBase64(encoded);
+
+// convert from base64url to regular ol' base64
+const b64 = base64url.toBase64(encoded);
+
+// convert from base64 to base64url
+const b64url = base64url.fromBase64(b64)
 ```

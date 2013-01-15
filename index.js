@@ -1,10 +1,15 @@
 function base64url(stringOrBuffer) {
-  const b64url = Buffer(stringOrBuffer).toString('base64')
-    .replace(/=/g, '')
-    .replace(/\+/g, '-')
-    .replace(/\//g, '_');
-  return b64url;
-};
+  return fromBase64(Buffer(stringOrBuffer).toString('base64'));
+}
+
+function fromBase64(b64string) {
+  return (
+    b64string
+      .replace(/=/g, '')
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+  );
+}
 
 function padString(string) {
   const segmentLength = 4;
@@ -30,5 +35,7 @@ base64url.toBase64 = function toBase64(base64UrlString) {
     .replace(/_/g, '/');
   return b64str;
 };
+
+base64url.fromBase64 = fromBase64;
 
 module.exports = base64url;

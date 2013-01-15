@@ -25,3 +25,11 @@ test('from base64url to base64', function (t) {
   t.same(result, b64, 'should be able to convert back');
   t.end();
 });
+
+test('from base64 to base64url', function (t) {
+  const b64 = base64(testString);
+  const b64url = base64url(testString);
+  const result = base64url.fromBase64(b64);
+  t.same(result, b64url, 'should be able to convert to b64url from b64');
+  t.end();
+});
