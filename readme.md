@@ -19,4 +19,7 @@ const b64 = base64url.toBase64(encoded);
 
 // convert from base64 to base64url
 const b64url = base64url.fromBase64(b64)
+
+// decode base64url
+data === base64url.decode(encoded);
 ```
