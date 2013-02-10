@@ -38,8 +38,13 @@ function base64url(stringOrBuffer) {
   return fromBase64(Buffer(stringOrBuffer).toString('base64'));
 }
 
+function toBuffer(base64string) {
+  return Buffer(toBase64(base64string), 'base64');
+}
+
 base64url.toBase64 = toBase64;
 base64url.fromBase64 = fromBase64;
 base64url.decode = decodeBase64Url;
+base64url.toBuffer = toBuffer;
 
 module.exports = base64url;

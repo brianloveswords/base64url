@@ -1,7 +1,7 @@
 const fs = require('fs');
 const test = require('tap').test;
 const base64url = require('..');
-const testString = fs.readFileSync('test.jpg').toString();
+const testString = fs.readFileSync(__dirname + '/test.jpg').toString();
 
 function base64(s) {
   return Buffer(s).toString('base64')
@@ -38,5 +38,12 @@ test('from base64url to string', function (t) {
   const b64url = base64url(testString);
   const result = base64url.decode(b64url);
   t.same(result, testString, 'should be able to decode');
+  t.end();
+});
+
+test('from base64url to buffer', function (t) {
+  const b64url = base64url(testString);
+  const result = base64url.toBuffer(b64url);
+  t.same(result, Buffer(testString), 'should be able to convert to buffer');
   t.end();
 });
