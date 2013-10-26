@@ -8,6 +8,9 @@ function fromBase64(base64string) {
 }
 
 function toBase64(base64UrlString) {
+  if (Buffer.isBuffer(base64UrlString))
+    base64UrlString = base64UrlString.toString()
+
   const b64str = padString(base64UrlString)
     .replace(/\-/g, '+')
     .replace(/_/g, '/');

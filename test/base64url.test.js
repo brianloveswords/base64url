@@ -41,6 +41,13 @@ test('from base64url to string', function (t) {
   t.end();
 });
 
+test('from base64url to string', function (t) {
+  const b64url = base64url(testString);
+  const result = base64url.decode(Buffer(b64url));
+  t.same(result, testString, 'should be able to decode');
+  t.end();
+});
+
 test('from base64url to buffer', function (t) {
   const b64url = base64url(testString);
   const result = base64url.toBuffer(b64url);
