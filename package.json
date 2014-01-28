@@ -18,7 +18,7 @@
   "license": "MIT",
   "readmeFilename": "readme.md",
   "gitHead": "a219306e93712cb4380286b44360fea4406d49d3",
-  "dependencies": {
+  "devDependencies": {
     "tap": "~0.3.3"
   }
 }
