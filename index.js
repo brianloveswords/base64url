@@ -8,33 +8,11 @@ function fromBase64(base64string) {
 }
 
 function toBase64(base64UrlString) {
-  if (Buffer.isBuffer(base64UrlString))
-    base64UrlString = base64UrlString.toString()
-
-  const b64str = padString(base64UrlString)
-    .replace(/\-/g, '+')
-    .replace(/_/g, '/');
-  return b64str;
-}
-
-function padString(string) {
-  const segmentLength = 4;
-  const stringLength = string.length;
-  const diff = string.length % segmentLength;
-  if (!diff)
-    return string;
-  var position = stringLength;
-  var padLength = segmentLength - diff;
-  const paddedStringLength = stringLength + padLength;
-  const buffer = Buffer(paddedStringLength);
-  buffer.write(string);
-  while (padLength--)
-    buffer.write('=', position++);
-  return buffer.toString();
+  return Buffer(base64UrlString, 'base64').toString('base64');
 }
 
 function decodeBase64Url(base64UrlString, encoding) {
-  return Buffer(toBase64(base64UrlString), 'base64').toString(encoding);
+  return Buffer(base64UrlString, 'base64').toString(encoding);
 }
 
 function base64url(stringOrBuffer) {
