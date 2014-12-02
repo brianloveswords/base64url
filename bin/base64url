@@ -12,7 +12,7 @@ var cli = require('meow')({
     '  -D, --decode   decodes input',
     '  -b, --break    break encoded string into num character lines',
     '  -i, --input    input file (default: stdin)',
-    '  -o, --output   output file (default: stdout),'
+    '  -o, --output   output file (default: stdout)'
   ].join('\n')
 }, {
     boolean: [
