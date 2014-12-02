@@ -20,6 +20,18 @@ $ echo 'Here is some text to encode' | base64url
 
 $ echo SGVyZSBpcyBzb21lIHRleHQgdG8gZW5jb2RlCg | base64url -D
 > Here is some text to encode
+
+$ base64url --help
+
+  For encoding to/from base64urls
+
+  Usage: base64url [-hvD] [-b num] [-i in_file] [-o out_file]
+    -h, --help     display this message
+    -v, --version  display version info
+    -D, --decode   decodes input
+    -b, --break    break encoded string into num character lines
+    -i, --input    input file (default: stdin)
+    -o, --output   output file (default: stdout),
 ```
 
 ## Library
