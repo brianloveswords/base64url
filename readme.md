@@ -38,6 +38,8 @@ Example
 'bGFkaWVzIGFuZCBnZW50bGVtYW4sIHdlIGFyZSBmbG9hdGluZyBpbiBzcGFjZQ'
 ```
 
+---
+
 ### base64url.decode(b64UrlEncodedString, [encoding])
 
 Convert a base64url encoded string into a raw string. Encoding defaults to `'utf8'`.
@@ -46,6 +48,8 @@ Convert a base64url encoded string into a raw string. Encoding defaults to `'utf
 > base64url.decode('cmlkZTogZHJlYW1zIGJ1cm4gZG93bg')
 'ride: dreams burn down'
 ```
+
+---
 
 ### base64url.fromBase64(b64EncodedString)
 
@@ -58,6 +62,9 @@ Example
 'qL8R4QIcQ_ZsRqOAbeRfcZhilN_MksRtDaErMA'
 ```
 
+---
+
+
 ### base64url.toBase64(b64UrlEncodedString)
 
 Convert a base64url encoded string to a base64 encoded string
@@ -66,6 +73,9 @@ Convert a base64url encoded string to a base64 encoded string
 > base64url.toBase64('qL8R4QIcQ_ZsRqOAbeRfcZhilN_MksRtDaErMA')
 'qL8R4QIcQ/ZsRqOAbeRfcZhilN/MksRtDaErMA=='
 ```
+
+---
+
 
 ### base64url.toBuffer(b64UrlEncodedString)
 
