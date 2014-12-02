@@ -6,7 +6,7 @@ var base64url = require('../');
 var cli = require('meow')({
   pkg: '../package.json',
   help: [
-    'Usage: base64 [-hvD] [-b num] [-i in_file] [-o out_file]',
+    'Usage: base64url [-hvD] [-b num] [-i in_file] [-o out_file]',
     '  -h, --help     display this message',
     '  -v, --version  display version info',
     '  -D, --decode   decodes input',
@@ -25,7 +25,6 @@ var cli = require('meow')({
     'o', 'output',
     'b', 'break',
   ],
-
 });
 
 var decode = cli.flags.D || cli.flags.decode;
