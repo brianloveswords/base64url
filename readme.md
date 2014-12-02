@@ -10,7 +10,7 @@ $ npm install base64url
 
 # Usage
 
-This package includes a CLI which can be used thusly:
+## CLI
 
 ```bash
 $ npm install -g base64url
@@ -22,10 +22,12 @@ $ echo SGVyZSBpcyBzb21lIHRleHQgdG8gZW5jb2RlCg | base64url -D
 > Here is some text to encode
 ```
 
-Or it can be used as a library, of course:
+## Library
 
-## base64url(stringOrBuffer)
-## base64url.encode(stringOrBuffer)
+### base64url(stringOrBuffer) ###
+
+### base64url.encode(stringOrBuffer) ###
+
 base64url encode `stringOrBuffer`
 
 
@@ -36,7 +38,8 @@ Example
 'bGFkaWVzIGFuZCBnZW50bGVtYW4sIHdlIGFyZSBmbG9hdGluZyBpbiBzcGFjZQ'
 ```
 
-## base64url.decode(b64UrlEncodedString, [encoding])
+### base64url.decode(b64UrlEncodedString, [encoding])
+
 Convert a base64url encoded string into a raw string. Encoding defaults to `'utf8'`.
 
 ```js
@@ -44,7 +47,8 @@ Convert a base64url encoded string into a raw string. Encoding defaults to `'utf
 'ride: dreams burn down'
 ```
 
-## base64url.fromBase64(b64EncodedString)
+### base64url.fromBase64(b64EncodedString)
+
 Convert a base64 encoded string to a base64url encoded string
 
 Example
@@ -54,7 +58,8 @@ Example
 'qL8R4QIcQ_ZsRqOAbeRfcZhilN_MksRtDaErMA'
 ```
 
-## base64url.toBase64(b64UrlEncodedString)
+### base64url.toBase64(b64UrlEncodedString)
+
 Convert a base64url encoded string to a base64 encoded string
 
 ```js
@@ -62,7 +67,8 @@ Convert a base64url encoded string to a base64 encoded string
 'qL8R4QIcQ/ZsRqOAbeRfcZhilN/MksRtDaErMA=='
 ```
 
-## base64url.toBuffer(b64UrlEncodedString)
+### base64url.toBuffer(b64UrlEncodedString)
+
 Convert a base64url encoded string to a Buffer
 
 ```js
