@@ -4,7 +4,7 @@ const base64url = require('..');
 const testString = fs.readFileSync(__dirname + '/test.jpg').toString();
 
 function base64(s) {
-  return Buffer(s).toString('base64')
+  return Buffer(s).toString('base64');
 }
 
 test('from string to base64url', function (t) {
@@ -37,14 +37,14 @@ test('from base64 to base64url', function (t) {
 test('from base64url to string', function (t) {
   const b64url = base64url(testString);
   const result = base64url.decode(b64url);
-  t.same(result, testString, 'should be able to decode');
+  t.same(Buffer(result), Buffer(testString), 'should be able to decode');
   t.end();
 });
 
-test('from base64url to string', function (t) {
+test('from base64url to string (buffer)', function (t) {
   const b64url = base64url(testString);
   const result = base64url.decode(Buffer(b64url));
-  t.same(result, testString, 'should be able to decode');
+  t.same(Buffer(result), Buffer(testString), 'should be able to decode');
   t.end();
 });
 
