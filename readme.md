@@ -36,6 +36,14 @@ Example
 'bGFkaWVzIGFuZCBnZW50bGVtYW4sIHdlIGFyZSBmbG9hdGluZyBpbiBzcGFjZQ'
 ```
 
+## base64url.decode(b64UrlEncodedString, [encoding])
+Convert a base64url encoded string into a raw string. Encoding defaults to `'utf8'`.
+
+```js
+> base64url.decode('cmlkZTogZHJlYW1zIGJ1cm4gZG93bg')
+'ride: dreams burn down'
+```
+
 ## base64url.fromBase64(b64EncodedString)
 Convert a base64 encoded string to a base64url encoded string
 
@@ -60,14 +68,6 @@ Convert a base64url encoded string to a Buffer
 ```js
 > base64url.toBuffer('c3Bpcml0dWFsaXplZA')
 <Buffer 73 70 69 72 69 74 75 61 6c 69 7a 65 64>
-```
-
-## base64url.decode(b64UrlEncodedString, [encoding])
-Convert a base64url encoded string into a raw string. Encoding defaults to `'utf8'`.
-
-```js
-> base64url.decode('cmlkZTogZHJlYW1zIGJ1cm4gZG93bg')
-'ride: dreams burn down'
 ```
 
 # License
