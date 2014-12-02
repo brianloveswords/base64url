@@ -9,7 +9,7 @@ function fromBase64(base64string) {
 
 function toBase64(base64UrlString) {
   if (Buffer.isBuffer(base64UrlString))
-    base64UrlString = base64UrlString.toString()
+    base64UrlString = base64UrlString.toString();
 
   const b64str = padString(base64UrlString)
     .replace(/\-/g, '+')
@@ -48,6 +48,7 @@ function toBuffer(base64string) {
 base64url.toBase64 = toBase64;
 base64url.fromBase64 = fromBase64;
 base64url.decode = decodeBase64Url;
+base64url.encode = base64url;
 base64url.toBuffer = toBuffer;
 
 module.exports = base64url;

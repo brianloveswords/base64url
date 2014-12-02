@@ -10,7 +10,22 @@ $ npm install base64url
 
 # Usage
 
+This package includes a CLI which can be used thusly:
+
+```bash
+$ npm install -g base64url
+
+$ echo 'Here is some text to encode' | base64url
+> SGVyZSBpcyBzb21lIHRleHQgdG8gZW5jb2RlCg
+
+$ echo SGVyZSBpcyBzb21lIHRleHQgdG8gZW5jb2RlCg | base64url -D
+> Here is some text to encode
+```
+
+Or it can be used as a library, of course:
+
 ## base64url(stringOrBuffer)
+## base64url.encode(stringOrBuffer)
 base64url encode `stringOrBuffer`
 
 
@@ -60,7 +75,7 @@ Convert a base64url encoded string into a raw string. Encoding defaults to `'utf
 MIT
 
 ```
-Copyright (c) 2013 Brian J. Brennan
+Copyright (c) 2014 Brian J. Brennan
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
@@ -81,4 +96,3 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
-

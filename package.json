@@ -3,6 +3,9 @@
   "version": "0.0.6",
   "description": "For encoding to/from base64urls",
   "main": "index.js",
+  "bin": {
+    "base64url": "./bin/base64url"
+  },
   "scripts": {
     "test": "./node_modules/.bin/tap test/*.test.js"
   },
@@ -20,5 +23,9 @@
   "gitHead": "a219306e93712cb4380286b44360fea4406d49d3",
   "devDependencies": {
     "tap": "~0.3.3"
+  },
+  "dependencies": {
+    "concat-stream": "^1.4.7",
+    "meow": "^2.0.0"
   }
 }

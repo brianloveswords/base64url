@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var concat = require('concat-stream');
+var base64url = require('../');
+var cli = require('meow')({
+  pkg: '../package.json',
+  help: [
+    'Usage',
+    '  base64url <input> – Encode the input',
+    '  base64url -D <input> - Decode the input',
+  ].join('\n')
+}, {
+  boolean: 'D',
+});
+
+const fn = cli.flags.D && base64url.decode || base64url.encode;
+
+process.stdin.pipe(concat(function (buf) {
+  process.stdout.write(fn(buf));
+}));
