@@ -37,8 +37,8 @@ function decodeBase64Url(base64UrlString, encoding) {
   return Buffer(toBase64(base64UrlString), 'base64').toString(encoding);
 }
 
-function base64url(stringOrBuffer) {
-  return fromBase64(Buffer(stringOrBuffer).toString('base64'));
+function base64url(stringOrBuffer, encoding) {
+  return fromBase64(Buffer(stringOrBuffer, encoding).toString('base64'));
 }
 
 function toBuffer(base64string) {
