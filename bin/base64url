@@ -27,7 +27,7 @@ var cli = require('meow')({
   ],
 });
 
-var decode = cli.flags.D || cli.flags.decode;
+var decode = cli.flags.d || cli.flags.decode;
 var fn = decode && base64url.decode || base64url.encode;
 
 function processStream(outputStream, breakLength) {
