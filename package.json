@@ -1,6 +1,6 @@
 {
   "name": "base64url",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "For encoding to/from base64urls",
   "main": "index.js",
   "bin": {
