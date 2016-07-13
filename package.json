@@ -1,13 +1,19 @@
 {
   "name": "base64url",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "For encoding to/from base64urls",
   "main": "index.js",
-  "bin": {
-    "base64url": "./bin/base64url"
-  },
+  "typings": "dist/base64url.d.ts",
+  "files": [
+    "dist/",
+    "typings/",
+    "index.js"
+  ],
   "scripts": {
-    "test": "./node_modules/.bin/tap test/*.test.js"
+    "build": "tsc",
+    "clean": "rm -f dist/*",
+    "test": "npm run clean && npm run build && tap test/*.test.js",
+    "prepublish": "npm run test"
   },
   "repository": {
     "type": "git",
@@ -19,13 +25,8 @@
   ],
   "author": "Brian J Brennan",
   "license": "MIT",
-  "readmeFilename": "readme.md",
-  "gitHead": "a219306e93712cb4380286b44360fea4406d49d3",
+  "readmeFilename": "README.md",
   "devDependencies": {
-    "tap": "~0.3.3"
-  },
-  "dependencies": {
-    "concat-stream": "~1.4.7",
-    "meow": "~2.0.0"
+    "tap": "6.1.1"
   }
 }

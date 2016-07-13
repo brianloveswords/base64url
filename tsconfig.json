@@ -1,0 +1,20 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "strictNullChecks": true,
+    "target": "es5"
+  },
+  "files": [
+    "./src/base64url.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -8,64 +8,56 @@ Converting to, and from, [base64url](http://en.wikipedia.org/wiki/Base64#RFC_464
 $ npm install base64url
 ```
 
+After installing with `npm` you can require this library from JavaScript or TypeScript:
+
+JavaScript
+```js
+const base64url = require('base64url');
+```
+
+TypeScript:
+```typescript
+import base64url from "base64url";
+```
+
 # Usage
 
 ## CLI
 
-```bash
-$ npm install -g base64url
-
-$ echo 'Here is some text to encode' | base64url
-> SGVyZSBpcyBzb21lIHRleHQgdG8gZW5jb2RlCg
-
-$ echo SGVyZSBpcyBzb21lIHRleHQgdG8gZW5jb2RlCg | base64url -D
-> Here is some text to encode
-
-$ base64url --help
-
-  For encoding to/from base64urls
-
-  Usage: base64url [-hvD] [-b num] [-i in_file] [-o out_file]
-    -h, --help     display this message
-    -v, --version  display version info
-    -D, --decode   decodes input
-    -b, --break    break encoded string into num character lines
-    -i, --input    input file (default: stdin)
-    -o, --output   output file (default: stdout),
-```
+The CLI has been removed. For the time being, please install `base64url@1.0.6` if you need the CLI.
 
 ## Library
 
-### base64url(stringOrBuffer) ###
+### base64url(input: string | Buffer, encoding: string = "utf8"): string
 
-### base64url.encode(stringOrBuffer) ###
+### base64url.encode(input: string | Buffer, encoding: string = "utf8"): string
 
-base64url encode `stringOrBuffer`
+base64url encode `input`. Input should be a `string` or a `Buffer`.
 
 
 Example
 
 ```js
-> base64url('ladies and gentlemen, we are floating in space')
+> base64url("ladies and gentlemen we are floating in space")
 'bGFkaWVzIGFuZCBnZW50bGVtYW4sIHdlIGFyZSBmbG9hdGluZyBpbiBzcGFjZQ'
 ```
 
 ---
 
-### base64url.decode(b64UrlEncodedString, [encoding])
+### base64url.decode(input: string, encoding: string = "utf8"): string
 
-Convert a base64url encoded string into a raw string. Encoding defaults to `'utf8'`.
+Convert a base64url encoded string into a raw string. The `encoding` argument can be used if the input is a string that's not utf8.
 
 ```js
-> base64url.decode('cmlkZTogZHJlYW1zIGJ1cm4gZG93bg')
+> base64url.decode("cmlkZTogZHJlYW1zIGJ1cm4gZG93bg")
 'ride: dreams burn down'
 ```
 
 ---
 
-### base64url.fromBase64(b64EncodedString)
+### base64url.fromBase64(input: string): string
 
-Convert a base64 encoded string to a base64url encoded string
+Convert a base64 encoded string to a base64url encoded string.
 
 Example
 
@@ -77,9 +69,9 @@ Example
 ---
 
 
-### base64url.toBase64(b64UrlEncodedString)
+### base64url.toBase64(input: string): string
 
-Convert a base64url encoded string to a base64 encoded string
+Convert a base64url encoded string to a base64 encoded string.
 
 ```js
 > base64url.toBase64('qL8R4QIcQ_ZsRqOAbeRfcZhilN_MksRtDaErMA')
@@ -89,9 +81,9 @@ Convert a base64url encoded string to a base64 encoded string
 ---
 
 
-### base64url.toBuffer(b64UrlEncodedString)
+### base64url.toBuffer(input: string): Buffer
 
-Convert a base64url encoded string to a Buffer
+Convert a base64url encoded string to a Buffer containing the decoded bytes.
 
 ```js
 > base64url.toBuffer('c3Bpcml0dWFsaXplZA')
@@ -103,7 +95,7 @@ Convert a base64url encoded string to a Buffer
 MIT
 
 ```
-Copyright (c) 2014 Brian J. Brennan
+Copyright (c) 2013–2016 Brian J. Brennan
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
