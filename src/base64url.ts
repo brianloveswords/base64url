@@ -3,12 +3,12 @@
 /**
  * Encoding type
  */
-declare type Encoding = "ascii" | "utf8" | "utf16le" | "ucs2" | "utf16le" | "base64" | "binary" | "hex"
+export declare type Encoding = "ascii" | "utf8" | "utf16le" | "ucs2" | "utf16le" | "base64" | "binary" | "hex"
 
 /**
  * Encoded string or buffer
  */
-declare type EncodedString = string | Buffer;
+export declare type EncodedString = string | Buffer;
 
 import padString from "./pad-string";
 
