@@ -10,7 +10,7 @@
     "index.js"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "typings install && tsc",
     "clean": "rm -f dist/*",
     "test": "npm run clean && npm run build && tap test/*.test.js",
     "prepublish": "npm run test"
