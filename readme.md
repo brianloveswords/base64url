@@ -90,6 +90,10 @@ Convert a base64url encoded string to a Buffer containing the decoded bytes.
 <Buffer 73 70 69 72 69 74 75 61 6c 69 7a 65 64>
 ```
 
+# Alternatives
+
+- [base64-url](https://github.com/joaquimserafim/base64-url)
+
 # License
 
 MIT
