@@ -2,6 +2,7 @@ language: node_js
 
 before_install:
   - npm install -g typescript@2
+  - npm install -g typings
 
 node_js:
   - "6"
