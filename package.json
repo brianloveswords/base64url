@@ -6,7 +6,6 @@
   "typings": "dist/base64url.d.ts",
   "files": [
     "dist/",
-    "typings/",
     "index.js"
   ],
   "scripts": {
@@ -27,6 +26,7 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
+    "@types/node": "^8.0.33",
     "tap": "6.1.1"
   }
 }
