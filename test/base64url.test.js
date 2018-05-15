@@ -54,3 +54,19 @@ test('from base64url to buffer', function (t) {
   t.same(result, testBuffer, 'should be able to convert to buffer');
   t.end();
 });
+
+test('encode validates input', function (t) {
+  const b64url = base64url(testBuffer, 'binary');
+
+  var result = undefined;
+
+  try {
+    base64url.encode(1000);
+  } catch (err) {
+    result = err;
+  }
+
+  t.not(result, undefined, 'should validate encode input is string or Buffer');
+  t.end();
+});
+
