@@ -9,7 +9,7 @@
     "outDir": "./dist",
     "removeComments": true,
     "strictNullChecks": true,
-    "target": "es5"
+    "target": "es6"
   },
   "files": [
     "./src/base64url.ts"
