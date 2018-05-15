@@ -6,11 +6,11 @@ function encode(input: string | Buffer, encoding: string = "utf8"): string {
     if (Buffer.isBuffer(input)) {
         return fromBase64(input.toString("base64"));
     }
-    return fromBase64(new Buffer(input as string, encoding).toString("base64"));
+    return fromBase64(Buffer.from(input as string, encoding).toString("base64"));
 };
 
 function decode(base64url: string, encoding: string = "utf8"): string {
-    return new Buffer(toBase64(base64url), "base64").toString(encoding);
+    return Buffer.from(toBase64(base64url), "base64").toString(encoding);
 }
 
 function toBase64(base64url: string | Buffer): string {
@@ -30,7 +30,7 @@ function fromBase64(base64: string): string {
 }
 
 function toBuffer(base64url: string): Buffer {
-    return new Buffer(toBase64(base64url), "base64");
+    return Buffer.from(toBase64(base64url), "base64");
 }
 
 export interface Base64Url {
