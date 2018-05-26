@@ -27,5 +27,8 @@
   "devDependencies": {
     "@types/node": "^10.0.0",
     "tap": "6.1.1"
+  },
+  "dependencies": {
+    "@types/node": "^6.0.57"
   }
 }
