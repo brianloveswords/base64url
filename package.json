@@ -3,6 +3,7 @@
   "version": "3.0.0",
   "description": "For encoding to/from base64urls",
   "main": "index.js",
+  "typings": "./dist/base64url.d.ts",
   "files": [
     "dist/",
     "index.js"
