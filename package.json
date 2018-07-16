@@ -24,6 +24,9 @@
   "author": "Brian J Brennan",
   "license": "MIT",
   "readmeFilename": "README.md",
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "devDependencies": {
     "@types/node": "^10.0.0",
     "tap": "6.1.1"

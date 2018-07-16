@@ -94,6 +94,11 @@ Convert a base64url encoded string to a Buffer containing the decoded bytes.
 
 - [base64-url](https://github.com/joaquimserafim/base64-url)
 
+# Supported Node.js versions
+
+This library should be used with current versions of the Node.js runtime's long-term stable (LTS)
+schedule. More information can be found [at the Node.js Release Working Group](https://github.com/nodejs/Release) repo.
+
 # License
 
 MIT
