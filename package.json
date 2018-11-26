@@ -1,6 +1,6 @@
 {
   "name": "base64url",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "For encoding to/from base64urls",
   "main": "index.js",
   "types": "./dist/base64url.d.ts",
