@@ -38,8 +38,8 @@ base64url encode `input`. Input should be a `string` or a `Buffer`.
 Example
 
 ```js
-> base64url("ladies and gentlemen we are floating in space")
-'bGFkaWVzIGFuZCBnZW50bGVtYW4sIHdlIGFyZSBmbG9hdGluZyBpbiBzcGFjZQ'
+> base64url("ladies and gentlemen, we are floating in space")
+'bGFkaWVzIGFuZCBnZW50bGVtZW4sIHdlIGFyZSBmbG9hdGluZyBpbiBzcGFjZQ'
 ```
 
 ---
