@@ -70,3 +70,12 @@ test('encode validates input', function (t) {
   t.end();
 });
 
+test('example from readme', function(t) {
+  const original = 'ladies and gentlemen, we are floating in space';
+  const encoded = 'bGFkaWVzIGFuZCBnZW50bGVtZW4sIHdlIGFyZSBmbG9hdGluZyBpbiBzcGFjZQ';
+  const resultEncoded = base64url.encode(original);
+  const resultDecoded = base64url.decode(encoded);
+  t.same(resultEncoded, encoded, 'these should match');
+  t.same(resultDecoded, original, 'these should match too');
+  t.end();
+});
