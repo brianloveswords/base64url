@@ -20,6 +20,23 @@ TypeScript:
 import base64url from "base64url";
 ```
 
+# Development
+
+Install typescript if not yet installed
+```bash
+$ npm install --global typescript
+```
+
+Run the test suite
+```bash
+$ npm test
+```
+
+Build the distribution
+```bash
+$ npm run build
+```
+
 # Usage
 
 ## CLI
