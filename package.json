@@ -30,6 +30,6 @@
   },
   "devDependencies": {
     "@types/node": "^10.0.0",
-    "tap": "^12.1.0"
+    "tap": "^13.1.9"
   }
 }
