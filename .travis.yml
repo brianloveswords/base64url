@@ -4,6 +4,7 @@ before_install:
   - npm install -g typescript@2
 
 node_js:
+  - "14
   - "12"
   - "10"
-  - "8"
+
