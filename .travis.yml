@@ -7,3 +7,6 @@ node_js:
   - "10"
   - "8"
   - "6"
+arch:
+  - amd64
+  - ppc64le
