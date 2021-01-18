@@ -1,11 +1,22 @@
 import padString from "./pad-string";
 
-function encode(input: string | Buffer, encoding: string = "utf8"): string {
-    if (Buffer.isBuffer(input)) {
-        return fromBase64(input.toString("base64"));
-    }
-    return fromBase64(Buffer.from(input as string, encoding).toString("base64"));
-};
+let encode: (input: string | Buffer, encoding: string) => string;
+
+if (Buffer.isEncoding("base64url")) {
+    encode = function encode(input, encoding = "utf8") {
+        if (Buffer.isBuffer(input)) {
+            return input.toString("base64url");
+        }
+        return Buffer.from(input as string, encoding).toString("base64url");
+    };
+} else {
+    encode = function encode(input, encoding = "utf8") {
+        if (Buffer.isBuffer(input)) {
+            return fromBase64(input.toString("base64"));
+        }
+        return fromBase64(Buffer.from(input as string, encoding).toString("base64"));
+    };
+}
 
 function decode(base64url: string, encoding: string = "utf8"): string {
     return Buffer.from(toBase64(base64url), "base64").toString(encoding);
