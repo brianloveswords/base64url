@@ -12,8 +12,8 @@ function decode(base64url: string, encoding: string = "utf8"): string {
 }
 
 function toBase64(base64url: string | Buffer): string {
-    // We this to be a string so we can do .replace on it. If it's
-    // already a string, this is a noop.
+    /* We want base64url to be a string so that we can do .replace on it. If it's
+    already a string, this is a noop.*/
     base64url = base64url.toString();
     return padString(base64url)
         .replace(/\-/g, "+")
