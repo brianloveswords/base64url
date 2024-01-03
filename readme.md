@@ -1,4 +1,4 @@
-# base64url  [![Build Status](https://secure.travis-ci.org/brianloveswords/base64url.png)](http://travis-ci.org/brianloveswords/base64url)
+# base64url [![Build Status](https://secure.travis-ci.org/brianloveswords/base64url.png)](http://travis-ci.org/brianloveswords/base64url)
 
 Converting to, and from, [base64url](http://en.wikipedia.org/wiki/Base64#RFC_4648)
 
@@ -11,13 +11,15 @@ $ npm install base64url
 After installing with `npm` you can require this library from JavaScript or TypeScript:
 
 JavaScript
+
 ```js
 const base64url = require('base64url');
 ```
 
 TypeScript:
+
 ```typescript
-import base64url from "base64url";
+import base64url from 'base64url';
 ```
 
 # Usage
@@ -33,7 +35,6 @@ The CLI has been removed. For the time being, please install `base64url@1.0.6` i
 ### base64url.encode(input: string | Buffer, encoding: string = "utf8"): string
 
 base64url encode `input`. Input should be a `string` or a `Buffer`.
-
 
 Example
 
@@ -68,7 +69,6 @@ Example
 
 ---
 
-
 ### base64url.toBase64(input: string): string
 
 Convert a base64url encoded string to a base64 encoded string.
@@ -79,7 +79,6 @@ Convert a base64url encoded string to a base64 encoded string.
 ```
 
 ---
-
 
 ### base64url.toBuffer(input: string): Buffer
 
@@ -98,6 +97,10 @@ Convert a base64url encoded string to a Buffer containing the decoded bytes.
 
 This library should be used with current versions of the Node.js runtime's long-term stable (LTS)
 schedule. More information can be found [at the Node.js Release Working Group](https://github.com/nodejs/Release) repo.
+
+# Support for browser
+
+This library can also be used in the browser using the `TextEncoder` that is supported in all modern browsers.
 
 # License
 
