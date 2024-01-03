@@ -1,22 +1,21 @@
 export default function padString(input: string): string {
-    let segmentLength = 4;
-    let stringLength = input.length;
-    let diff = stringLength % segmentLength;
+  const segmentLength = 4;
+  const stringLength = input.length;
+  const diff = stringLength % segmentLength;
 
-    if (!diff) {
-        return input;
-    }
+  if (!diff) {
+    return input;
+  }
 
-    let position = stringLength;
-    let padLength = segmentLength - diff;
-    let paddedStringLength = stringLength + padLength;
-    let buffer = Buffer.alloc(paddedStringLength);
+  const padLength = segmentLength - diff;
 
-    buffer.write(input);
-
-    while (padLength--) {
-        buffer.write("=", position++);
-    }
-
+  // Check if Buffer is available (Node.js environment)
+  if (typeof Buffer !== 'undefined') {
+    let buffer = Buffer.alloc(stringLength + padLength, input);
+    buffer.fill('=', stringLength);
     return buffer.toString();
+  } else {
+    // Fallback to string concatenation for browser environment
+    return input + '='.repeat(padLength);
+  }
 }

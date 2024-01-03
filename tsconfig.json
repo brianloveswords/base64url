@@ -2,7 +2,10 @@
   "compileOnSave": true,
   "compilerOptions": {
     "declaration": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "module": "commonjs",
+    "lib": ["es2015", "dom"],
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -11,12 +14,6 @@
     "strictNullChecks": true,
     "target": "es5"
   },
-  "files": [
-    "./src/base64url.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "test",
-    ".travis.yml"
-  ]
+  "files": ["./src/base64url.ts"],
+  "exclude": ["node_modules", "test", ".travis.yml"]
 }
